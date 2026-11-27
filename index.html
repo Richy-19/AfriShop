@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AfriShop : mode africaine, artisanat et produits locaux à Douala.">
+  <title>AfriShop — Site vitrine</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="#accueil" class="logo">AfriShop</a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-list">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#produits">Produits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <h1>Découvrez le savoir-faire africain</h1>
+      <p>Des produits authentiques, locaux et de qualité.</p>
+      <a href="#produits" class="btn">Découvrir nos produits</a>
+    </section>
+
+    <section id="produits" class="products-section">
+      <h2>Nos produits</h2>
+      <div class="filters" role="group" aria-label="Filtrer par catégorie">
+        <button type="button" class="filter-btn is-active" data-filter="all">Tous</button>
+        <button type="button" class="filter-btn" data-filter="mode">Mode</button>
+        <button type="button" class="filter-btn" data-filter="artisanat">Artisanat</button>
+        <button type="button" class="filter-btn" data-filter="alimentation">Alimentation</button>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card"
+                 data-id="chemise"
+                 data-name="Chemise africaine"
+                 data-price="15000"
+                 data-category="mode">
+          <img src="images/chemise-africaine.png" alt="Chemise africaine">
+          <h3>Chemise africaine</h3>
+          <p>Confection textile locale aux motifs traditionnels.</p>
+          <p class="price">15 000 FCFA</p>
+          <button type="button" class="add-btn">Ajouter au panier</button>
+        </article>
+
+        <article class="product-card"
+                 data-id="panier"
+                 data-name="Panier artisanal"
+                 data-price="8000"
+                 data-category="artisanat">
+          <img src="images/panier-artisanal.png" alt="Panier artisanal">
+          <h3>Panier artisanal</h3>
+          <p>Tressage artisanal résistant pour le quotidien.</p>
+          <p class="price">8 000 FCFA</p>
+          <button type="button" class="add-btn">Ajouter au panier</button>
+        </article>
+
+        <article class="product-card"
+                 data-id="cafe"
+                 data-name="Café local"
+                 data-price="5000"
+                 data-category="alimentation">
+          <img src="images/cafe-local.png" alt="Café local">
+          <h3>Café local</h3>
+          <p>Grains torréfiés issus de producteurs locaux.</p>
+          <p class="price">5 000 FCFA</p>
+          <button type="button" class="add-btn">Ajouter au panier</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contactez-nous</h2>
+      <p>Adresse : 14 Avenue de l'Indépendance, Douala</p>
+      <p>Horaires : du lundi au samedi, de 8h30 à 18h30</p>
+      <p>Email : <a href="mailto:contact@afrishop.example">contact@afrishop.example</a></p>
+      <p><a id="contact-whatsapp" class="btn" href="#contact" target="_blank" rel="noopener">Nous écrire sur WhatsApp</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 AfriShop — Tous droits réservés</p>
+  </footer>
+
+  <aside id="cart-bar" class="cart-bar" hidden>
+    <p class="cart-summary">
+      <span id="cart-count">0</span> article(s) • <span id="cart-total">0 FCFA</span>
+    </p>
+    <details class="cart-details">
+      <summary>Voir le détail</summary>
+      <ul id="cart-items" class="cart-items"></ul>
+    </details>
+    <div class="cart-actions">
+      <a id="order-link" class="btn" href="#" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+      <button id="clear-cart" type="button" class="btn-ghost">Vider le panier</button>
+    </div>
+  </aside>
+</body>
+</html>
