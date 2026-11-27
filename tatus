@@ -1,0 +1,404 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex faedbe0..85f8172 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -1,105 +1,13 @@[m
+[31m-<!DOCTYPE html>[m
+[31m-<html lang="fr">[m
+[31m-<head>[m
+[31m-  <meta charset="UTF-8">[m
+[31m-  <meta name="viewport" content="width=device-width, initial-scale=1">[m
+[31m-  <meta name="description" content="AfriShop : mode africaine, artisanat et produits locaux à Douala.">[m
+[31m-  <title>AfriShop — Site vitrine</title>[m
+[31m-  <link rel="stylesheet" href="style.css">[m
+[31m-  <script src="script.js" defer></script>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-  <header class="site-header">[m
+[31m-    <a href="#accueil" class="logo">AfriShop</a>[m
+[31m-    <nav aria-label="Navigation principale">[m
+[31m-      <ul class="nav-list">[m
+[31m-        <li><a href="#accueil">Accueil</a></li>[m
+[31m-        <li><a href="#produits">Produits</a></li>[m
+[31m-        <li><a href="#contact">Contact</a></li>[m
+[31m-      </ul>[m
+[31m-    </nav>[m
+[31m-  </header>[m
+[31m-[m
+[31m-  <main>[m
+[31m-    <section id="accueil" class="hero">[m
+[31m-      <h1>Découvrez le savoir-faire africain</h1>[m
+[31m-      <p>Des produits authentiques, locaux et de qualité.</p>[m
+[31m-      <a href="#produits" class="btn">Découvrir nos produits</a>[m
+[31m-    </section>[m
+[31m-[m
+[31m-    <section id="produits" class="products-section">[m
+[31m-      <h2>Nos produits</h2>[m
+[31m-      <div class="filters" role="group" aria-label="Filtrer par catégorie">[m
+[31m-        <button type="button" class="filter-btn is-active" data-filter="all">Tous</button>[m
+[31m-        <button type="button" class="filter-btn" data-filter="mode">Mode</button>[m
+[31m-        <button type="button" class="filter-btn" data-filter="artisanat">Artisanat</button>[m
+[31m-        <button type="button" class="filter-btn" data-filter="alimentation">Alimentation</button>[m
+[31m-      </div>[m
+[31m-[m
+[31m-      <div class="products-grid">[m
+[31m-        <article class="product-card"[m
+[31m-                 data-id="chemise"[m
+[31m-                 data-name="Chemise africaine"[m
+[31m-                 data-price="15000"[m
+[31m-                 data-category="mode">[m
+[31m-          <img src="images/chemise-africaine.png" alt="Chemise africaine">[m
+[31m-          <h3>Chemise africaine</h3>[m
+[31m-          <p>Confection textile locale aux motifs traditionnels.</p>[m
+[31m-          <p class="price">15 000 FCFA</p>[m
+[31m-          <button type="button" class="add-btn">Ajouter au panier</button>[m
+[31m-        </article>[m
+[31m-[m
+[31m-        <article class="product-card"[m
+[31m-                 data-id="panier"[m
+[31m-                 data-name="Panier artisanal"[m
+[31m-                 data-price="8000"[m
+[31m-                 data-category="artisanat">[m
+[31m-          <img src="images/panier-artisanal.png" alt="Panier artisanal">[m
+[31m-          <h3>Panier artisanal</h3>[m
+[31m-          <p>Tressage artisanal résistant pour le quotidien.</p>[m
+[31m-          <p class="price">8 000 FCFA</p>[m
+[31m-          <button type="button" class="add-btn">Ajouter au panier</button>[m
+[31m-        </article>[m
+[31m-[m
+[31m-        <article class="product-card"[m
+[31m-                 data-id="cafe"[m
+[31m-                 data-name="Café local"[m
+[31m-                 data-price="5000"[m
+[31m-                 data-category="alimentation">[m
+[31m-          <img src="images/cafe-local.png" alt="Café local">[m
+[31m-          <h3>Café local</h3>[m
+[31m-          <p>Grains torréfiés issus de producteurs locaux.</p>[m
+[31m-          <p class="price">5 000 FCFA</p>[m
+[31m-          <button type="button" class="add-btn">Ajouter au panier</button>[m
+[31m-        </article>[m
+[31m-      </div>[m
+[31m-    </section>[m
+[31m-[m
+[31m-    <section id="contact" class="contact-section">[m
+[31m-      <h2>Contactez-nous</h2>[m
+[31m-      <p>Adresse : 14 Avenue de l'Indépendance, Douala</p>[m
+[31m-      <p>Horaires : du lundi au samedi, de 8h30 à 18h30</p>[m
+[31m-      <p>Email : <a href="mailto:contact@afrishop.example">contact@afrishop.example</a></p>[m
+[31m-      <p><a id="contact-whatsapp" class="btn" href="#contact" target="_blank" rel="noopener">Nous écrire sur WhatsApp</a></p>[m
+[31m-    </section>[m
+[31m-  </main>[m
+[31m-[m
+[31m-  <footer class="site-footer">[m
+[31m-    <p>© 2026 AfriShop — Tous droits réservés</p>[m
+[31m-  </footer>[m
+[31m-[m
+[31m-  <aside id="cart-bar" class="cart-bar" hidden>[m
+[31m-    <p class="cart-summary">[m
+[31m-      <span id="cart-count">0</span> article(s) • <span id="cart-total">0 FCFA</span>[m
+[31m-    </p>[m
+[31m-    <details class="cart-details">[m
+[31m-      <summary>Voir le détail</summary>[m
+[31m-      <ul id="cart-items" class="cart-items"></ul>[m
+[31m-    </details>[m
+[31m-    <div class="cart-actions">[m
+[31m-      <a id="order-link" class="btn" href="#" target="_blank" rel="noopener">Commander sur WhatsApp</a>[m
+[31m-      <button id="clear-cart" type="button" class="btn-ghost">Vider le panier</button>[m
+[31m-    </div>[m
+[31m-  </aside>[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m[32m<!DOCTYPE html>[m[41m [m
+[32m+[m[32m<html lang="fr">[m[41m [m
+[32m+[m[32m<head>[m[41m [m
+[32m+[m[32m<meta charset="UTF-8">[m[41m [m
+[32m+[m[32m<meta name="viewport" content="width=device-width, initial-scale=1">[m[41m [m
+[32m+[m[32m<title>AfriShop</title>[m[41m [m
+[32m+[m[32m<link rel="stylesheet" href="style.css">[m[41m [m
+[32m+[m[32m</head>[m[41m [m
+[32m+[m[32m<body>[m[41m [m
+[32m+[m[32m<h1>Bienvenue sur AfriShop</h1>[m[41m [m
+[32m+[m[32m<p>Découvrez nos produits africains.</p>[m[41m [m
+[32m+[m[32m</body>[m[41m [m
+[32m+[m[32m</html>[m[41m [m
+\ No newline at end of file[m
+[1mdiff --git a/style.css b/style.css[m
+[1mindex 0b7ac4c..e9f01a3 100644[m
+[1m--- a/style.css[m
+[1m+++ b/style.css[m
+[36m@@ -1,270 +1,2 @@[m
+[31m-* {[m
+[31m-  box-sizing: border-box;[m
+[31m-}[m
+[31m-[m
+[31m-body {[m
+[31m-  font-family: Arial, sans-serif;[m
+[31m-  margin: 0;[m
+[31m-  color: #1f2924;[m
+[31m-  background-color: #faf9f5;[m
+[31m-  line-height: 1.5;[m
+[31m-}[m
+[31m-[m
+[31m-.site-header {[m
+[31m-  display: flex;[m
+[31m-  justify-content: space-between;[m
+[31m-  align-items: center;[m
+[31m-  flex-wrap: wrap;[m
+[31m-  gap: 1rem;[m
+[31m-  padding: 1rem 2rem;[m
+[31m-  background-color: #235339;[m
+[31m-  color: #ffffff;[m
+[31m-}[m
+[31m-[m
+[31m-.logo {[m
+[31m-  color: #ffffff;[m
+[31m-  text-decoration: none;[m
+[31m-  font-size: 1.35rem;[m
+[31m-  font-weight: bold;[m
+[31m-}[m
+[31m-[m
+[31m-.nav-list {[m
+[31m-  list-style: none;[m
+[31m-  display: flex;[m
+[31m-  flex-wrap: wrap;[m
+[31m-  gap: 1.5rem;[m
+[31m-  margin: 0;[m
+[31m-  padding: 0;[m
+[31m-}[m
+[31m-[m
+[31m-.nav-list a {[m
+[31m-  color: #ffffff;[m
+[31m-  text-decoration: none;[m
+[31m-}[m
+[31m-[m
+[31m-.nav-list a:hover {[m
+[31m-  text-decoration: underline;[m
+[31m-}[m
+[31m-[m
+[31m-.hero {[m
+[31m-  background-color: #e6dcc8;[m
+[31m-  text-align: center;[m
+[31m-  padding: 3.5rem 1.5rem;[m
+[31m-}[m
+[31m-[m
+[31m-.hero h1 {[m
+[31m-  color: #1f4d36;[m
+[31m-  margin-top: 0;[m
+[31m-  margin-bottom: 0.75rem;[m
+[31m-  font-size: 2rem;[m
+[31m-}[m
+[31m-[m
+[31m-.hero p {[m
+[31m-  margin-top: 0;[m
+[31m-  margin-bottom: 1.5rem;[m
+[31m-  color: #4b524d;[m
+[31m-}[m
+[31m-[m
+[31m-.btn {[m
+[31m-  display: inline-block;[m
+[31m-  background-color: #235339;[m
+[31m-  color: #ffffff;[m
+[31m-  text-decoration: none;[m
+[31m-  padding: 0.75rem 1.25rem;[m
+[31m-  border-radius: 4px;[m
+[31m-}[m
+[31m-[m
+[31m-.products-section {[m
+[31m-  max-width: 1000px;[m
+[31m-  margin: 0 auto;[m
+[31m-  padding: 3rem 1.5rem;[m
+[31m-  text-align: center;[m
+[31m-}[m
+[31m-[m
+[31m-.products-section h2 {[m
+[31m-  color: #1f4d36;[m
+[31m-  margin-top: 0;[m
+[31m-}[m
+[31m-[m
+[31m-.products-grid {[m
+[31m-  display: flex;[m
+[31m-  flex-wrap: wrap;[m
+[31m-  justify-content: center;[m
+[31m-  gap: 1.5rem;[m
+[31m-  margin-top: 1.5rem;[m
+[31m-}[m
+[31m-[m
+[31m-.product-card {[m
+[31m-  flex: 1 1 260px;[m
+[31m-  max-width: 300px;[m
+[31m-  background-color: #ffffff;[m
+[31m-  border: 1px solid #e2dfd7;[m
+[31m-  border-radius: 6px;[m
+[31m-  padding: 1rem;[m
+[31m-}[m
+[31m-[m
+[31m-.product-card img {[m
+[31m-  width: 100%;[m
+[31m-  height: 150px;[m
+[31m-  object-fit: cover;[m
+[31m-  border-radius: 4px;[m
+[31m-  background-color: #ece6d8;[m
+[31m-}[m
+[31m-[m
+[31m-.product-card h3 {[m
+[31m-  margin: 0.75rem 0 0.4rem;[m
+[31m-}[m
+[31m-[m
+[31m-.product-card p {[m
+[31m-  margin: 0.4rem 0;[m
+[31m-}[m
+[31m-[m
+[31m-.price {[m
+[31m-  font-weight: bold;[m
+[31m-  color: #235339;[m
+[31m-}[m
+[31m-[m
+[31m-.contact-section {[m
+[31m-  text-align: center;[m
+[31m-  padding: 2rem 1.5rem;[m
+[31m-}[m
+[31m-[m
+[31m-.contact-section h2 {[m
+[31m-  color: #1f4d36;[m
+[31m-  margin-top: 0;[m
+[31m-}[m
+[31m-[m
+[31m-.contact-section p {[m
+[31m-  margin: 0.35rem 0;[m
+[31m-}[m
+[31m-[m
+[31m-.site-footer {[m
+[31m-  background-color: #235339;[m
+[31m-  color: #ffffff;[m
+[31m-  text-align: center;[m
+[31m-  padding: 1rem;[m
+[31m-  font-size: 0.9rem;[m
+[31m-}[m
+[31m-[m
+[31m-@media (prefers-reduced-motion: no-preference) {[m
+[31m-  html {[m
+[31m-    scroll-behavior: smooth;[m
+[31m-  }[m
+[31m-}[m
+[31m-[m
+[31m-.site-header {[m
+[31m-  position: sticky;[m
+[31m-  top: 0;[m
+[31m-  z-index: 10;[m
+[31m-}[m
+[31m-[m
+[31m-section[id] {[m
+[31m-  scroll-margin-top: 6rem;[m
+[31m-}[m
+[31m-[m
+[31m-.nav-list a.is-active {[m
+[31m-  font-weight: bold;[m
+[31m-  text-decoration: underline;[m
+[31m-  text-underline-offset: 6px;[m
+[31m-}[m
+[31m-[m
+[31m-@media (max-width: 600px) {[m
+[31m-  .site-header {[m
+[31m-    padding: 0.75rem 1rem;[m
+[31m-  }[m
+[31m-[m
+[31m-  .hero h1 {[m
+[31m-    font-size: 1.6rem;[m
+[31m-  }[m
+[31m-}[m
+[31m-[m
+[31m-.filters {[m
+[31m-  display: flex;[m
+[31m-  flex-wrap: wrap;[m
+[31m-  justify-content: center;[m
+[31m-  gap: 0.5rem;[m
+[31m-  margin-top: 1rem;[m
+[31m-}[m
+[31m-[m
+[31m-.filter-btn {[m
+[31m-  font: inherit;[m
+[31m-  padding: 0.4rem 1rem;[m
+[31m-  border: 1px solid #235339;[m
+[31m-  border-radius: 999px;[m
+[31m-  background-color: #ffffff;[m
+[31m-  color: #235339;[m
+[31m-  cursor: pointer;[m
+[31m-}[m
+[31m-[m
+[31m-.filter-btn.is-active {[m
+[31m-  background-color: #235339;[m
+[31m-  color: #ffffff;[m
+[31m-}[m
+[31m-[m
+[31m-[hidden] {[m
+[31m-  display: none !important;[m
+[31m-}[m
+[31m-[m
+[31m-.add-btn {[m
+[31m-  font: inherit;[m
+[31m-  width: 100%;[m
+[31m-  margin-top: 0.5rem;[m
+[31m-  padding: 0.6rem 1rem;[m
+[31m-  border: 0;[m
+[31m-  border-radius: 4px;[m
+[31m-  background-color: #235339;[m
+[31m-  color: #ffffff;[m
+[31m-  cursor: pointer;[m
+[31m-}[m
+[31m-[m
+[31m-.add-btn:hover {[m
+[31m-  background-color: #1f4d36;[m
+[31m-}[m
+[31m-[m
+[31m-.cart-bar {[m
+[31m-  position: fixed;[m
+[31m-  left: 0;[m
+[31m-  right: 0;[m
+[31m-  bottom: 0;[m
+[31m-  z-index: 20;[m
+[31m-  padding: 0.75rem 1rem;[m
+[31m-  background-color: #ffffff;[m
+[31m-  border-top: 3px solid #235339;[m
+[31m-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);[m
+[31m-}[m
+[31m-[m
+[31m-.cart-summary {[m
+[31m-  margin: 0;[m
+[31m-  font-weight: bold;[m
+[31m-}[m
+[31m-[m
+[31m-.cart-details {[m
+[31m-  margin: 0.4rem 0;[m
+[31m-  font-size: 0.9rem;[m
+[31m-}[m
+[31m-[m
+[31m-.cart-items {[m
+[31m-  margin: 0.4rem 0 0;[m
+[31m-  padding-left: 1.2rem;[m
+[31m-}[m
+[31m-[m
+[31m-.cart-actions {[m
+[31m-  display: flex;[m
+[31m-  flex-wrap: wrap;[m
+[31m-  gap: 0.5rem;[m
+[31m-  margin-top: 0.5rem;[m
+[31m-}[m
+[31m-[m
+[31m-.btn-ghost {[m
+[31m-  font: inherit;[m
+[31m-  padding: 0.75rem 1.25rem;[m
+[31m-  border: 1px solid #235339;[m
+[31m-  border-radius: 4px;[m
+[31m-  background: transparent;[m
+[31m-  color: #235339;[m
+[31m-  cursor: pointer;[m
+[31m-}[m
+[31m-[m
+[31m-body.cart-open {[m
+[31m-  padding-bottom: 8rem;[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32mbody { font-family: Arial, sans-serif; margin: 0; }[m[41m [m
+[32m+[m[32mh1 { color: darkgreen; }[m[41m [m
+\ No newline at end of file[m
