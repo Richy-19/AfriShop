@@ -37,3 +37,37 @@ header nav a {
 header nav a:hover {
   text-decoration: underline;
 }
+
+#accueil {
+  background-color: #f5f5dc; /* Fond beige */
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#accueil h1 {
+  font-size: 2.2rem;
+  color: #1b7a3d;
+  margin-bottom: 15px;
+}
+
+#accueil p {
+  font-size: 1.1rem;
+  color: #333333;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+  line-height: 1.5;
+}
+
+#accueil .btn-produits {
+  display: inline-block;
+  background-color: #1b7a3d;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#accueil .btn-produits:hover {
+  background-color: #145c2e;
+}
